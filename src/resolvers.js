@@ -14,6 +14,10 @@ const books = [
 export const resolvers = {
   Query: {
     books: () => books,
+		fetchBirds: async () => {
+	    const birds = await Bird.find();
+      return birds;
+    },
   },
   Mutation: {
   	createBird: async (_, { name }) => {

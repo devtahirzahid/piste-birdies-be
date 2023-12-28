@@ -8,6 +8,7 @@ export const typeDefs = gql`
 
   type Query {
     books: [Book]
+    fetchBirds: [Bird!]!
   }
 
   type Bird {
