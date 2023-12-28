@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/index.js"  
+    "dev": "nodemon --exec babel-node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +18,9 @@
     "@babel/preset-env": "^7.23.6",
     "graphql": "^16.8.1",
     "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "mongoose": "^8.0.3"
   }
 }
