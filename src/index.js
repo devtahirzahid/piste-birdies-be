@@ -7,6 +7,8 @@ import { resolvers } from './resolvers.js';
 
 const app = express();
 
+// now we have to configure mongodb models
+
 const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
