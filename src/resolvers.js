@@ -1,4 +1,5 @@
 import { Bird } from './models/Bird.js'
+import { User } from './models/User.js'
 
 const books = [
   {
@@ -21,12 +22,21 @@ export const resolvers = {
 	    const birds = await Bird.find();
       return birds;
     },
+   	fetchUsers: async () => {
+	    const users = await User.find();
+      return users;
+    },
   },
   Mutation: {
   	createBird: async (_, { name }) => {
 			const rio = new Bird({ name });
 			await rio.save();
 			return rio;
+  	},
+  	createUser: async (_, { name }) => {
+			const default1 = new User({ name });
+			await default1.save();
+			return default1;
   	}
   }
 }; 
